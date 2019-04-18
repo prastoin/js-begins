@@ -1,0 +1,36 @@
+
+.hunter {
+	font-family: "arial", verdana, serif ;
+	font-size: 40px;
+	font-style: oblique;
+}
+
+.prey {
+	font-family: "arial", verdana, serif ;
+	font-size: 40px;
+	font-style: oblique;
+}
+
+#scoreboard {
+	justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+}
+
+.square {
+	width: 500px;
+	margin: 10px;
+	height: 500px;
+	position: absolute;
+	box-shadow: 1px 1px 12px #555;
+}
+
+canvas {
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+}
+
+body {
+	margin: 0;
+}

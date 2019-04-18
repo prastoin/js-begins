@@ -20,6 +20,13 @@ window.addEventListener('load', () => {
 	};
 });
 
+function on_data(x1, y1)
+{
+	if (x1 <= 505 && y1 <= 505)
+		return (false);
+	return (true);
+}
+
 function draw_prey(data)
 {
 	const { ctx, canvas } = data;
@@ -32,7 +39,7 @@ function draw_prey(data)
 		img.onload = function () {
 			img.height = hunter.height;
 			img.width = hunter.width;
-			for (let j = 0; j < 5; j++) {
+			for (let j = 0; j < 100; j++) {
 				let x;
 				let y;
 
@@ -41,22 +48,26 @@ function draw_prey(data)
 					x = Math.floor(Math.random() * (window.innerWidth - hunter.width - 10)) + 5;
 					y = Math.floor(Math.random() * (window.innerHeight - hunter.height - 10)) + 5;
 					guard++;
-				} while(guard < 100 && data.tab.some((coord) => (between(x, y, coord.x, coord.y, hunter.width, hunter.height))))
-				if (guard == 100)
+				} while (guard < 100 && data.tab.some((coord) => (between(x, y, coord.x, coord.y, hunter.width, hunter.height))))
+				if (guard >= 100)
 					break ;
-	img.animate = false;
-				data.tab.push({x, y, type: (j % 2) ? 'hunter' : 'prey', file : (j % 2) ? hunter : img, animated: false }); // possible dutiliser le res du terneaire juste avant ?
+				img.animate = false;
+				if (!(x <= 505 && y <= 505))
+					data.tab.push({x, y, type: (j % 2) ? 'hunter' : 'prey', file : (j % 2) ? hunter : img, animated: false }); // possible dutiliser le res du terneaire juste avant ?
 			}
 			ft_display(data.tab, ctx);
 		};
-		if (img.complete)
-			img.onload();
+/*		if (img.complete)//merci david ?
+			img.onload();*/
 	}
+	console.log(data.tab);
 }
 
 function ft_display(tab, ctx)
 {
-	tab.forEach(({x, y, file}) => ctx.drawImage(file, x, y, file.width, file.height));
+	tab.forEach(({x, y, file}) => {
+			ctx.drawImage(file, x, y, file.width, file.height)
+	});
 }
 
 /*function draw_sprite(img, i, j, x, y, width, height, explo_ctx, t_width, t_height)
@@ -111,15 +122,14 @@ function ft_display_explosion(img, data)
 		ctx.drawImage(explo_img, (i * 256), (j * 256), 256, 256, x, y, t_width, t_height);
 		i++;
 	}, 30)
-
 }
 
 function between(x1, y1, x2, y2, width, height) {
-    if (x1 - 5 > x2 + width + 5 || x2 - 5 > x1 + width + 5)
+	if (x1 - 5 > x2 + width + 5 || x2 - 5 > x1 + width + 5)
         return false;
     if (y1 - 5 > y2 + height + 5 || y2 - 5 > y1 + height + 5)
         return false;
-	return true;
+	return (true);
 }
 
 //x1 y1 zone click
