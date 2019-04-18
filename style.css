@@ -1,23 +1,21 @@
 
-.hunter {
-	font-family: "arial", verdana, serif ;
-	font-size: 40px;
-	font-style: oblique;
-}
-
-.prey {
-	font-family: "arial", verdana, serif ;
-	font-size: 40px;
-	font-style: oblique;
-}
-
-#scoreboard {
-	justify-content: space-around;
+.scoreboard {
 	display: flex;
 	flex-direction: row;
+	font-family: "arial", verdana, serif ;
+	font-size: 20px;
+	font-style: oblique;
+
 }
 
-.square {
+.title{
+	min-width:120px;
+	text-align: center;
+}
+
+#square {
+	display: flex;
+	justify-content: space-evenly;
 	width: 500px;
 	margin: 10px;
 	height: 500px;
