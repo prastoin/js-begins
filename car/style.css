@@ -1,6 +1,6 @@
 *{
 	margin: 0;
-	padding; 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -126,10 +126,6 @@ a:hover,
 a:focus {
 	color: #333;
 	background-color: #fff;
-}html,
-body {
-	margin: 0;
-	padding: 0;
 }
 
 nav {
@@ -153,3 +149,24 @@ a:not(:last-child) {
 	margin-right: 12px;
 }
 
+.menu {
+margin: 0px;
+text-align: center;
+}
+
+.menu_content {
+display: inline-block;
+margin: 10px 10px 10px 10px;
+width: 40%;
+height: 40%;
+border: 4mm ridge rgb(170, 50, 220, .6);;
+background: greenyellow;
+transition: all 0.8s ease;
+}
+
+.menu_content:hover
+{
+	cursor: cell;
+	background: red;
+	width: 45%;
+}
