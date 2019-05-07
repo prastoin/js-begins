@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500i,700');
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+.content{
+	display: flex;
+	justify-content: space-between;
+}
 header {
 	background: white;
 	display: flex;
@@ -11,6 +17,18 @@ header {
 	text-align: center;
 	align-items: flex-end;
 	justify-content: space-between;
+}
+
+.left{
+	background: linear-gradient(#e66465, #9198e5);
+	width: 10vw;
+	height: 100vw;
+}
+
+.right{
+	background: linear-gradient(#e66465, #9198e5);
+	width: 10vw;
+	height: 100vw;
 }
 
 .img1 {
@@ -152,10 +170,10 @@ text-align: center;
 .menu_content {
 display: inline-block;
 margin: 10px 10px 10px 10px;
-width: 40%;
-height: 40%;
+width: 20vw;
+height: 15vw;
 border: 4mm ridge rgb(170, 50, 220, .6);;
-background: greenyellow;
+background: #9198f0;
 transition: all 0.8s ease;
 }
 
@@ -163,5 +181,13 @@ transition: all 0.8s ease;
 {
 	cursor: cell;
 	background: red;
-	width: 45%;
+	width: 22vw;
+}
+
+footer{
+	background: #9fff01;
+	height: 10vw;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 }
