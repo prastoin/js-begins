@@ -5,9 +5,12 @@
 }
 
 header {
-	padding: 20px;
 	background: white;
+	display: flex;
+	position: relative;
 	text-align: center;
+	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .img1 {
@@ -29,23 +32,12 @@ header {
 	transform: rotateY(180deg);
 }
 
-header > #coeur{
-	position: absolute;
-	top: -9px;
-	left: -2px;
-	bottom: 100vw;
-}
-
 header > h1 {
 	color: black;
+	position: relative;
+	top: -10px;
 	text-align: center;
 	font-family: Asap, sans-serif;
-}
-
-header > #coeur2 {
-	position: absolute;
-	top: 85vw;
-	right: 0;
 }
 
 body {
@@ -129,6 +121,9 @@ a:focus {
 }
 
 nav {
+	top: 0px;
+	z-index: 1000;
+	position: sticky;
 	display: flex;
 	padding: 12px;
 	background-color: #333;
