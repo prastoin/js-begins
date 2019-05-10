@@ -22,13 +22,11 @@ header {
 .left{
 	background: linear-gradient(#e66465, #9198e5);
 	width: 10vw;
-	height: 100vw;
 }
 
 .right{
 	background: linear-gradient(#e66465, #9198e5);
 	width: 10vw;
-	height: 100vw;
 }
 
 .img1 {
@@ -165,6 +163,7 @@ a:not(:last-child) {
 .menu {
 margin: 0px;
 text-align: center;
+margin-bottom: 100px;
 }
 
 .menu_content {
@@ -188,6 +187,15 @@ footer{
 	background: #9fff01;
 	height: 10vw;
 	width: 100%;
-	bottom: 0;
-	left: 0;
+}
+
+.note
+{
+	position: relative;
+	width: 50%;
+	height: 100px;
+	background-color: brown;
+	margin-left: 25%;
+	top: -25%;
+	
 }
