@@ -1,5 +1,5 @@
 # js-begins
-Testings things
+Testing things
 
 npm install
 npm run serve
